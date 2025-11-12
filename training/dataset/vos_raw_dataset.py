@@ -131,7 +131,16 @@ class PNGRawDataset(VOSRawDataset):
                 video_mask_root, self.single_object_mode
             )
 
-        all_frames = sorted(glob.glob(os.path.join(video_frame_root, "*.jpg")))
+        # Support both PNG and JPG, prefer PNG (better for floor plans - lossless)
+        png_frames = sorted(glob.glob(os.path.join(video_frame_root, "*.png")))
+        jpg_frames = sorted(glob.glob(os.path.join(video_frame_root, "*.jpg")))
+        
+        # Use PNG if available, otherwise fall back to JPG
+        if png_frames:
+            all_frames = png_frames
+        else:
+            all_frames = jpg_frames
+            
         if self.truncate_video > 0:
             all_frames = all_frames[: self.truncate_video]
         frames = []
