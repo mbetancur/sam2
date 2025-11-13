@@ -319,7 +319,7 @@ trainer:
 
       state_dict:
         _target_: training.utils.checkpoint_utils.load_checkpoint_and_apply_kernels
-        checkpoint_path: null # PATH to SAM 2.1 checkpoint (e.g., /content/pdg/sam2/checkpoints/sam2.1_hiera_base_plus.pt or ./checkpoints/sam2.1_hiera_base_plus.pt)
+        checkpoint_path: /content/pdg/sam2/checkpoints/sam2.1_hiera_base_plus.pt # PATH to SAM 2.1 checkpoint (e.g., /content/pdg/sam2/checkpoints/sam2.1_hiera_base_plus.pt or ./checkpoints/sam2.1_hiera_base_plus.pt)
         ckpt_state_dict_keys: ['model']
 
 launcher:
