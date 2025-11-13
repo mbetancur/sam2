@@ -13,9 +13,9 @@ scratch:
 
 dataset:
   # PATHS to Dataset - UPDATE THESE PATHS
-  img_folder: null # PATH to tuning_dataset/images folder (e.g., ./tuning_dataset/images)
-  gt_folder: null  # PATH to tuning_dataset/annotations folder (e.g., ./tuning_dataset/annotations)
-  file_list_txt: null # PATH to train_list.txt (e.g., ./tuning_dataset/train_list.txt)
+  img_folder: /content/pdg/sam2/tuning_dataset/images # PATH to tuning_dataset/images folder (e.g., ./tuning_dataset/images)
+  gt_folder: /content/pdg/sam2/tuning_dataset/annotations  # PATH to tuning_dataset/annotations folder (e.g., ./tuning_dataset/annotations)
+  file_list_txt: /content/pdg/sam2/tuning_dataset/train_list.txt # PATH to train_list.txt (e.g., ./tuning_dataset/train_list.txt)
   multiplier: 2
 
 # Image transforms (same as video, but for single frames)
